@@ -388,3 +388,8 @@ PRODUCT_COPY_FILES += \
      ro.hwui.text_large_cache_height=2048 \
      ro.hwui.text_small_cache_height=2048 \
      ro.hwui.texture_cache_flushrate=0.4
+# OTA
+ PRODUCT_PROPERTY_OVERRIDES += \
+    ro.ota.romname=ATOMIC-OS \
+    ro.ota.version=$(shell date +"%Y%m%d") \
+    ro.ota.manifest=https://raw.githubusercontent.com/TeamDarkness-Devices/ota_devices/master/kenzo.xml
